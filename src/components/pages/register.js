@@ -1,12 +1,10 @@
 // pages/signup.js
 
 import { useState } from 'react';
-import Head from 'next/head';
 import '../pages/register.css'
 
 const SignupPage = () => {
-  const [firstname,setfirstname]=useState('');
-  const [lastname,lasttname]=useState('');
+   
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
