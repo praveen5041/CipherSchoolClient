@@ -9,8 +9,21 @@ function Navigate() {
      <Navbar bg='info' expand='lg'>
         <Container>
             <LinkContainer to='/'>
-            <img src={logo} style={{ width: 5, height: 5 }} />
+            <img src={logo} style={{ width: 50, height: 50 }} />
             </LinkContainer>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className='ms-auto'>
+                    {!user&&(
+                        <LinkContainer to="/signup">
+                        <Nav.Link >Signup</Nav.Link>
+                    </LinkContainer>
+                    )}
+                    <LinkContainer to="/login">
+                        <Nav.Link >Login</Nav.Link>
+                    </LinkContainer>
+                </Nav>
+            </Navbar.Collapse>
         </Container>
      </Navbar>
   )
